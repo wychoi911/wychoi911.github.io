@@ -16,10 +16,6 @@ profile: <br> 경영학과의 자존심을 지키자
 #twitter_username: twitter_username
 github_username:  wychoi911
 
-# Comment Service (Disqus or 多说)
-#  choose one and un-comment the line to active it
-disqus_shortname: maengdev   # get one: https://disqus.com/admin/signup/
-#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
 
 permalink: /archivers/:title
 gems:
