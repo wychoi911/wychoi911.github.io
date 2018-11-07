@@ -16,6 +16,7 @@ profile: <br> 경영학과의 자존심을 지키자
 #twitter_username: twitter_username
 github_username:  wychoi911
 
+google_analytics: UA-128752946-1
 
 permalink: /archivers/:title
 gems:
