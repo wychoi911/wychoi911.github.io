@@ -17,6 +17,11 @@ profile: <br> 문과생의 프로그래밍 첫 걸음
 #twitter_username: twitter_username
 github_username:  wychoi911
 
+# Comment Service (Disqus or 多说)
+#  choose one and un-comment the line to active it
+disqus_shortname: wychoi911   # get one: https://disqus.com/admin/signup/
+#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+
 google_analytics: UA-128752946-1
 
 permalink: /archivers/:title
