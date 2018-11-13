@@ -1,21 +1,19 @@
 ---
 layout: default
 ---
-<div class="post">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h3 class="post-title">{{ page.title }}</h3>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
 
-  <article class="post-content">
+   </header>
+
+  <div class="post-content" itemprop="articleBody">
     {{ content }}
-  </article>
+
+  </div>
   
-  {% include comment.html %}
----
-layout: default
-comments: true
-# other options
----
-</div>
+{% if page.comments != false %}
+  {% include disqus_comments.html %}
+{% endif %}
+</article>
