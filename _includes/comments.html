@@ -1,10 +1,24 @@
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+  <a class="a2a_button_facebook"></a>
+  <a class="a2a_button_print"></a>
+  <a class="a2a_button_evernote"></a>
+  <a class="a2a_button_linkedin"></a>
+  <a class="a2a_button_email"></a>
+  <a class="a2a_button_twitter"></a>
+  <a class="a2a_button_copy_link"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
 {% if page.nocomments %}
 {% else %}
 {% if site.disqus_shortname %}
 <div class="post-comments">
   <div id="disqus_thread"></div>
   <script type="text/javascript">
-      var disqus_shortname = https://disqus.com.wychoi911 '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
+      var disqus_shortname = '{{ site.disqus_shortname }}'; // required: replace example with your forum shortname
       (function() {
           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
@@ -12,4 +26,25 @@
       })();
   </script>
 </div>
+{% endif %}
+{% if site.duoshuo_shortname %}
+<div class="post-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
+      (function() {
+      	var ds = document.createElement('script');
+      	ds.type = 'text/javascript';ds.async = true;
+      	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      	ds.charset = 'UTF-8';
+      	(document.getElementsByTagName('head')[0] 
+      	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+{% endif %}
 {% endif %}
