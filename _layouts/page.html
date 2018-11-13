@@ -1,15 +1,16 @@
 ---
 layout: default
-comments: true
 ---
-<article class="post">
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <h3 class="post-title">{{ page.title }}</h3>
   </header>
 
-  <div class="post-content">
+  <article class="post-content">
     {{ content }}
-  </div>
+  </article>
 
-</article>
+  {% include comment.html %}
+
+</div>
